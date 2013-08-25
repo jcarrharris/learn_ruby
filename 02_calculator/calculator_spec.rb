@@ -10,7 +10,7 @@ describe "add" do
     add(0,0).should == 0
   end
 
-  it "adds 2 and 2" do
+  it "adds 2 and 2" descriptions
     add(2,2).should == 4
   end
 
