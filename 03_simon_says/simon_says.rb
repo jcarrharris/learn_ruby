@@ -1,3 +1,5 @@
+LITTLE_WORDS = %w{ a and the over }
+
 def echo(str)
 	return "#{str}"
 end
@@ -28,21 +30,18 @@ def first_word(str)
 		array.first
 end
 
-#Ask for help 
+
 def titleize(str)
-	str = %w{a an the and but or for nor of}
-	words = string.split
-	result = ""
-	i = 1
-
-	result << words.first.capitalize
-	while i < words.length
-		x = words[i].to_s.capitalize
-		result << " " << x
-		i += 1
+	array = str.split(" ")
+	
+	titleize_array = []
+	array.each do |word|  
+		word.capitalize! unless LITTLE_WORDS.include?(word) 
+		titleize_array << word
 	end
-	return result.strip
-
+	
+	titleize_array.first.capitalize!
+	titleize_array.join(" ")
 end
 
 
