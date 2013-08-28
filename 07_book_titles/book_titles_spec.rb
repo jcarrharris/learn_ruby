@@ -3,7 +3,7 @@ require 'book'
 describe Book do
 
   # Before every test...
-  before do
+  before doite
     # do this. (before is a method given to use by RSpec.)
     @book = Book.new
   end
